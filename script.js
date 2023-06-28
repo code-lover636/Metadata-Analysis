@@ -1,6 +1,6 @@
 function convertToAscii(imageData) {
     // ASCII characters ordered by intensity
-    const asciiCharacters = '@%#*+=-:. ';
+    const asciiCharacters = '. ';
 
     let asciiArt = '';
 
