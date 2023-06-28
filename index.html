@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Web Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>MetaData Analyser</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-    <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
-    <div class="container">
-        <img id="input"/>
-        <img id="output"/>
+    <!-- HTML CODE  -->
+    <div class="upload-container">
+        <input type="file" class="py-button file-upload" py-change="analyze_image_metadata()" id="get-data">
+        <div class="file-btn">Choose File</div>
     </div>
-    <script src="script.js"></script>
+    <div class="container" style="display: none;"></div>
 </body>
 </html>
 

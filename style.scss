@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    .upload-container{
+      z-index: 5;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://i.pinimg.com/originals/95/57/8c/95578cdd71c7280492476da49836a083.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      .file-upload, .file-btn{
+          display: inline-block;
+          height: 50vh;
+          width: 50vh;
+          cursor: pointer;
+          background: linear-gradient(to bottom, #1c89e2, #550583);
+          color: #FFFFFF;
+          border-radius: 50%;
+          border: 2px dotted black;
+      }
+      .file-btn{
+          position: absolute;
+          pointer-events: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 5rem;
+          font-weight: 800;
+          font-family: inter;
+      }
+    }
+  }
+
+  
