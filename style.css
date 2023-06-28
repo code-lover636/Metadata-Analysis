@@ -1,26 +1,33 @@
 body {
-    background-color: #FF0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
 }
 
-#home {
+.container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
 
-#header {
+.section1 {
+    background-color: #FFFFFF;
+    color: #FF0000;
+    padding: 20px;
     text-align: center;
-    color: #000000;
-    margin-bottom: 20px;
 }
 
-#imageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.section2 {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 #resultContainer {
     display: flex;
