@@ -5,16 +5,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+    <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
     <div class="container">
-        <div class="section1">
-            <h1>Big Text</h1>
-            <p>Tagline</p>
-            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
-        </div>
-        <div class="section2">
-            <img src="image.jpg" alt="Image">
-        </div>
+        <img id="input"/>
+        <img id="output"/>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
+

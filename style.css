@@ -1,31 +1,25 @@
-body {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#353b48;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-.container {
+body #imageInput{
+    width: 50%;
+    height: 25%;
+    background: red;
     display: flex;
-    flex-direction: column;
-}
-
-.section1 {
-    background-color: #FFFFFF;
-    color: #FF0000;
-    padding: 20px;
-    text-align: center;
-}
-
-.section2 {
-    background-color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 
