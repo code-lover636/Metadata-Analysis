@@ -3,14 +3,67 @@
 <head>
   <title>MetaData Analyser</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/exif-js"></script>
 </head>
 <body>
     <!-- HTML CODE  -->
     <div class="upload-container">
-        <input type="file" class="py-button file-upload" py-change="analyze_image_metadata()" id="get-data">
+        <input type="file" class="py-button file-upload" onchange="getExif(event)" id="get-data">
         <div class="file-btn">Choose File</div>
     </div>
-    <div class="container" style="display: none;"></div>
+    <div class="container" style="display: flex;">
+      <div id="header">
+        <img src="path/to/your/image.jpg" alt="Image" style="display: block; margin: 0 auto; padding: 20px;">
+      </div>
+    
+      <div id="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row 1, Column 1</td>
+              <td>Row 1, Column 2</td>
+            </tr>
+            <tr>
+              <td>Row 2, Column 1</td>
+              <td>Row 2, Column 2</td>
+            </tr>
+            <tr>
+              <td>Row 3, Column 1</td>
+              <td>Row 3, Column 2</td>
+            </tr>
+            <tr>
+              <td>Row 4, Column 1</td>
+              <td>Row 4, Column 2</td>
+            </tr>
+            <tr>
+              <td>Row 5, Column 1</td>
+              <td>Row 5, Column 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>  
+
+        function writeContent(){
+          const container = document.querySelector(".container");
+          container.style.display = "flex";
+        }
+        function getExif(event) {
+          console.log(event.target.files[0]);
+          let img1 = event.target.files[0];
+          EXIF.getData(img1, function () {
+            var MetaData = EXIF.getAllTags(this);
+            console.log(JSON.stringify(MetaData, null, "\t"));
+          });
+        }
+    </script>
 </body>
 </html>
 

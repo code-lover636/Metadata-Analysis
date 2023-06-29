@@ -24,6 +24,7 @@ body {
           color: #FFFFFF;
           border-radius: 50%;
           border: 2px dotted black;
+          opacity:0;
       }
       .file-btn{
           position: absolute;
@@ -31,11 +32,45 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 5rem;
+          font-size: 2rem;
           font-weight: 800;
           font-family: inter;
+          opacity: 1;
       }
     }
-  }
+    .container{
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      z-index: 50;
+      position: absolute;
+      top: 0;
+      left: 0;
+      #header {
+        text-align: center;
+        padding: 20px 0;
+      }
+  
+      #table-container {
+        margin: 20px auto;
+        width: 80%;
+      }
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+  
+      th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+  
+      th {
+        background-color: #f2f2f2;
+      }
+  
+    }
+}
 
   
