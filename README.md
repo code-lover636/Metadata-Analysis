@@ -1,5 +1,5 @@
 # Metadata-Analysis
-
+See hosted [Website](https://code-lover636.github.io/Metadata-Analysis/) <br>
 This project is an implementation of a metadata analysis tool using HTML, CSS, and JavaScript.
 
 ## Overview
@@ -8,7 +8,7 @@ The metadata analysis project aims to provide a user-friendly interface to analy
 
 ## Features
 
-- File Upload: Users can upload files from their local machine.
+- File Upload: Users can upload files from their local machine. Users can drag and drop images.
 - Metadata Extraction: The project extracts metadata from uploaded files.
 - Display and Analysis: The extracted metadata is displayed in a structured format for easy analysis.
 - Interactive Interface: Users can interact with the metadata analysis tool through a user-friendly interface.
