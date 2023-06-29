@@ -11,56 +11,55 @@
         <input type="file" class="py-button file-upload" onchange="getExif(event)" id="get-data">
         <div class="file-btn">Choose File</div>
     </div>
-    <div class="container" style="display: flex;">
+    <div class="container" style="display: none;">
       <div id="header">
-        <img src="path/to/your/image.jpg" alt="Image" style="display: block; margin: 0 auto; padding: 20px;">
+        <img src="" id="pic" alt="Image" style="display: block; margin: 0 auto; padding: 20px;">
       </div>
     
       <div id="table-container">
         <table>
           <thead>
             <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
+              <th>Key</th>
+              <th>Value</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Row 1, Column 1</td>
-              <td>Row 1, Column 2</td>
-            </tr>
-            <tr>
-              <td>Row 2, Column 1</td>
-              <td>Row 2, Column 2</td>
-            </tr>
-            <tr>
-              <td>Row 3, Column 1</td>
-              <td>Row 3, Column 2</td>
-            </tr>
-            <tr>
-              <td>Row 4, Column 1</td>
-              <td>Row 4, Column 2</td>
-            </tr>
-            <tr>
-              <td>Row 5, Column 1</td>
-              <td>Row 5, Column 2</td>
-            </tr>
+          <tbody id="table">
           </tbody>
         </table>
       </div>
     </div>
     <script>  
 
-        function writeContent(){
+        function writeContent(img, metadata){
           const container = document.querySelector(".container");
           container.style.display = "flex";
+
+          const reader = new FileReader();
+          reader.onload = e => document.getElementById("pic").src = e.target.result;
+          reader.readAsDataURL(img);
+
+          const table = document.getElementById("table");
+          metadata = JSON.parse(metadata);
+          let child = ""
+          for (let key in metadata){
+            if (["thumbnail","undefined",""].includes(key)) continue;
+
+            child += `           
+            <tr>
+              <td>${key}</td>
+              <td>${metadata[key]}</td>
+            </tr>`
+            
+          }
+          table.innerHTML = child;
         }
+
         function getExif(event) {
-          console.log(event.target.files[0]);
           let img1 = event.target.files[0];
           EXIF.getData(img1, function () {
             var MetaData = EXIF.getAllTags(this);
-            console.log(JSON.stringify(MetaData, null, "\t"));
+            writeContent(img1,JSON.stringify(MetaData));
           });
         }
     </script>

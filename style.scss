@@ -46,28 +46,48 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      #header {
-        text-align: center;
-        padding: 20px 0;
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: inter;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      overflow-y: scroll;
+      padding: 2em 0em;
+      padding-bottom: 3em;
+      &::-webkit-scrollbar{
+        display: none;
       }
-  
+      #header {
+        padding: 0;
+        img{
+          width: auto;
+          height: 200px;
+        }
+      }
+
       #table-container {
-        margin: 20px auto;
         width: 80%;
       }
-  
+
       table {
         width: 100%;
         border-collapse: collapse;
       }
-  
+
       th, td {
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #000000;
       }
-  
+
       th {
-        background-color: #f2f2f2;
+        background-color: #051227;
+        color: #fff;
+      }
+
+      td {
+        background-color: #333;
       }
   
     }
