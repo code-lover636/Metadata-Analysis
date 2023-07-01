@@ -19,8 +19,8 @@ body .upload-container {
 }
 body .upload-container .file-upload, body .upload-container .file-btn {
   display: inline-block;
-  height: 50vh;
-  width: 50vh;
+  height: 35vh;
+  width: 35vh;
   cursor: pointer;
   background: linear-gradient(to bottom, #1c89e2, #550583);
   color: #FFFFFF;
